@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using FrooxEngine;
+using FrooxEngine.Store;
 using HarmonyLib;
 using ResoniteModLoader;
 using SkyFrost.Base;
@@ -52,6 +54,23 @@ namespace BlockX
                     return false;
                 }
 
+                return true;
+            }
+        }
+
+        [HarmonyPatch(typeof(LocalDB), "TryFetchAssetRecordAsync")]
+        class LocalDB_TryFetchAssetRecordAsync_Patch
+        {
+            public static bool Prefix(Uri assetURL, ref Task<AssetRecord> __result)
+            {
+                if (LUtil.CheckIfBlocked(assetURL.AbsoluteUri))
+                {
+                    __result = null;
+                    
+                    Msg($"Prevented {assetURL} from loading");
+                    return false;
+                }
+                
                 return true;
             }
         }
