@@ -8,6 +8,12 @@ It is made to prevent meshes, textures and any other kind of content from loadin
 
 > WARNING: THIS MOD ISN'T READY YET AND IS MISSING IMPORTANT FEATURES, DO NOT USE
 
+What this mod can and cannot do:
+- It can block specific individual assets (textures, meshes, documents, ect)
+- It CANNOT block a user (use the builtin block function)
+- It CANNOT block a whole avatar (use the builtin hide function)
+- It CANNOT completely block an object or world (unless every. single. asset. is in the blocklist but this would lead to more issues)
+
 ## How does it work?
 
 ### Blocklists
