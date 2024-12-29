@@ -18,6 +18,8 @@ Blocklists for BlockX are made in the `txt` (plaintext) format and goes as follo
 d8f42c9ee9af31a2671f6f00773d8e2bc7a808596d195725b61e0d8e4b349e48
 ```
 
+The default blocklist is located at: https://i.j4.lc/resonite/bl.txt and will be downloaded at startup and written to a file named `blockXBL.txt` in the `rml_mods` folder (or wherever the mod DLL is located) for caching.
+
 ### Blocking
 
 Right now, the mod will hijack the asset downloading phase and completely prevent the asset from being downloaded.
