@@ -36,7 +36,8 @@ The default blocklist is located at: https://i.j4.lc/resonite/bl.txt and will be
 
 ### Blocking
 
-Right now, the mod will hijack the asset downloading phase and completely prevent the asset from being downloaded.
+Right now, the mod will hijack the asset downloading phase and completely prevent the asset from being downloaded.  
+The cache checking logic is also hijacked to avoid loading assets that are already locally cached.
 
 ## Installation
 
