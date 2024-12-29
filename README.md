@@ -4,6 +4,8 @@ BlockX is a wide-spectrum content blocker for [Resonite](https://resonite.com), 
 
 It is made to prevent meshes, textures and any other kind of content from loading.
 
+> WARNING: THIS CAN AND WILL BREAK MAPS, SYSTEMS AND AVATARS DEPENDING ON WHAT IS BLOCKED
+
 ## How does it work?
 
 /// TODO
