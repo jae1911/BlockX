@@ -6,6 +6,8 @@ It is made to prevent meshes, textures and any other kind of content from loadin
 
 > WARNING: THIS CAN AND WILL BREAK MAPS, SYSTEMS AND AVATARS DEPENDING ON WHAT IS BLOCKED
 
+> WARNING: THIS MOD ISN'T READY YET AND IS MISSING IMPORTANT FEATURES, DO NOT USE
+
 ## How does it work?
 
 ### Blocklists
