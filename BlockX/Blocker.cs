@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using FrooxEngine;
 using HarmonyLib;
@@ -35,9 +36,10 @@ namespace BlockX
         {
             public static bool Prefix(Uri url, float priority, DB_Endpoint? overrideEndpoint, ref ValueTask<GatherResult> __result)
             {
-                if (url.ToString().Contains(sigTest))
+                if (url.AbsoluteUri.Contains(sigTest))
                 {
-                    __result = new ValueTask<GatherResult>(new GatherResult((string)null));
+                    string tempFile = Path.GetTempFileName();
+                    __result = new ValueTask<GatherResult>(new GatherResult(tempFile));
                     
                     Msg($"Prevented {url} from loading");
                     return false;
