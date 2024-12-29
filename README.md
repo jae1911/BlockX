@@ -14,6 +14,10 @@ What this mod can and cannot do:
 - It CANNOT block a whole avatar (use the builtin hide function)
 - It CANNOT completely block an object or world (unless every. single. asset. is in the blocklist but this would lead to more issues)
 
+The goal of this project is mainly to block advertisements and tracking in worlds and not to replace the builtin blocking function of Resonite or moderation reports.  
+BlockX is not a policing tool, more like a sanity protector.  
+If you have any issues with anybody, [report them to moderation](https://moderation.resonite.com), do not try to get their avatar, world or creations added to this project.
+
 ## How does it work?
 
 ### Blocklists
