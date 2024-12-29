@@ -8,7 +8,19 @@ It is made to prevent meshes, textures and any other kind of content from loadin
 
 ## How does it work?
 
-/// TODO
+### Blocklists
+
+Blocklists for BlockX are made in the `txt` (plaintext) format and goes as follows:
+
+```
+# This is comment
+# Asset signature to block:
+d8f42c9ee9af31a2671f6f00773d8e2bc7a808596d195725b61e0d8e4b349e48
+```
+
+### Blocking
+
+Right now, the mod will hijack the asset downloading phase and completely prevent the asset from being downloaded.
 
 ## Installation
 
