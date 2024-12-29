@@ -16,12 +16,10 @@ namespace BlockX
 
         [AutoRegisterConfigKey]
         private static readonly ModConfigurationKey<string> blockListUrl = new ModConfigurationKey<string>("blockListUrl", "The default URL to fetch a blocklist from.", () => "https://i.j4.lc/resonite/bl.txt");
-
-        private const string sigTest = "d8f42c9ee9af31a2671f6f00773d8e2bc7a808596d195725b61e0d8e4b349e48";
         
         private static ModConfiguration Config;
 
-        private ListUtil _lUtil = new ListUtil();
+        public static ListUtil LUtil = new ListUtil();
         
         public override void OnEngineInit()
         {
@@ -37,7 +35,7 @@ namespace BlockX
             
             Msg("Insert buckazoid.");
 
-            _lUtil.RefreshList(Config?.GetValue(blockListUrl));
+            LUtil.RefreshList(Config?.GetValue(blockListUrl));
         }
 
         [HarmonyPatch(typeof(EngineAssetGatherer), "Gather")]
@@ -45,7 +43,7 @@ namespace BlockX
         {
             public static bool Prefix(Uri url, float priority, DB_Endpoint? overrideEndpoint, ref ValueTask<GatherResult> __result)
             {
-                if (url.AbsoluteUri.Contains(sigTest))
+                if (LUtil.CheckIfBlocked(url.AbsoluteUri))
                 {
                     string tempFile = Path.GetTempFileName();
                     __result = new ValueTask<GatherResult>(new GatherResult(tempFile));

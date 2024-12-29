@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Reflection;
 using ResoniteModLoader;
@@ -45,6 +46,11 @@ namespace BlockX
             }
             
             ResoniteMod.Msg($"List refreshed, {_cleanList.Count} rules loaded.");
+        }
+
+        public bool CheckIfBlocked(string matcher)
+        {
+            return _cleanList.Any(matcher.Contains);
         }
 
         private void UpdateLocalBlCache(string blPath)
