@@ -23,6 +23,11 @@ namespace BlockX
         
         public override void OnEngineInit()
         {
+            if (ModLoader.IsHeadless)
+            {
+                Warn("Here be dragons, proceed with caution, using this mod on headlesses might lead to more issues.");
+            }
+            
             Config = GetConfiguration();
 
             Harmony harmony = new Harmony("lc.j4.blockx");
