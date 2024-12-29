@@ -20,6 +20,8 @@ namespace BlockX
         private const string sigTest = "d8f42c9ee9af31a2671f6f00773d8e2bc7a808596d195725b61e0d8e4b349e48";
         
         private static ModConfiguration Config;
+
+        private ListUtil _lUtil = new ListUtil();
         
         public override void OnEngineInit()
         {
@@ -34,6 +36,8 @@ namespace BlockX
             harmony.PatchAll();
             
             Msg("Insert buckazoid.");
+
+            _lUtil.RefreshList(Config?.GetValue(blockListUrl));
         }
 
         [HarmonyPatch(typeof(EngineAssetGatherer), "Gather")]
