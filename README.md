@@ -34,6 +34,8 @@ d8f42c9ee9af31a2671f6f00773d8e2bc7a808596d195725b61e0d8e4b349e48
 
 The default blocklist is located at: https://i.j4.lc/resonite/bl.txt and will be downloaded at startup and written to a file named `blockXBL.txt` in the `rml_mods` folder (or wherever the mod DLL is located) for caching.
 
+Test world is [available in Resonite](https://go.resonite.com/record/U-j4/R-daa15fc6-c28f-475a-a124-e34b4ba18c68) with defaults in the current BL.
+
 ### Blocking
 
 Right now, the mod will hijack the asset downloading phase and completely prevent the asset from being downloaded.  
