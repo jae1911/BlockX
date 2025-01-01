@@ -47,6 +47,13 @@ BlockX relies on [ResoniteModLoader](https://github.com/resonite-modding-group/R
 
 You will then need to download the latest release, and put the DLL file into the `rml_mods` folder.
 
+## TODO
+
+- [x] Test image blocking
+- [x] Test mesh blocking
+- [ ] Test audio blocking
+- [ ] Test external URL blocking
+
 ## Acknowledgements
 
 - Raymond Hill for making uBlock Origin, serving as inspiration for this project
