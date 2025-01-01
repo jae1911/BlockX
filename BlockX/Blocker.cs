@@ -64,7 +64,7 @@ namespace BlockX
             {
                 if (LUtil.CheckIfBlocked(assetURL.AbsoluteUri))
                 {
-                    __result = null;
+                    __result = Task.FromResult(new AssetRecord());
                     
                     Msg($"Prevented {assetURL} from loading");
                     return false;
