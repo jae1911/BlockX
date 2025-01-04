@@ -52,7 +52,7 @@ You will then need to download the latest release, and put the DLL file into the
 - [x] Test image blocking
 - [x] Test mesh blocking
 - [ ] Test audio blocking
-- [ ] Test external URL blocking
+- [x] Test external URL blocking
 
 ## Acknowledgements
 
