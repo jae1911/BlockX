@@ -59,7 +59,7 @@ namespace BlockX
             {
                 foreach (string line in _cleanList)
                 {
-                    writer.Write(line);
+                    writer.Write(line + Environment.NewLine);
                 }
             }
         }
