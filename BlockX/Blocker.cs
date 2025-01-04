@@ -16,11 +16,11 @@ namespace BlockX
         public override string Version => "0.1.0";
 
         [AutoRegisterConfigKey]
-        private static readonly ModConfigurationKey<string> blockListUrl = new ModConfigurationKey<string>("blockListUrl", "The default URL to fetch a blocklist from.", () => "https://i.j4.lc/resonite/bl.txt");
+        private static readonly ModConfigurationKey<string> blockListUrl = new ModConfigurationKey<string>("blockListUrl", "The default URL to fetch a blocklist from.", () => "https://raw.githubusercontent.com/jae1911/BlockX-Lists/refs/heads/beep/lists/default.txt");
         
         private static ModConfiguration Config;
 
-        public static ListUtil LUtil = new ListUtil();
+        private static readonly ListUtil LUtil = new ListUtil();
         
         public override void OnEngineInit()
         {
