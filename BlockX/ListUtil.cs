@@ -92,7 +92,7 @@ namespace BlockX
 
                         while ((line = reader.ReadLine()) != null)
                         {
-                            if (!line.TrimStart().StartsWith("#"))
+                            if (!line.TrimStart().StartsWith("#") && !string.IsNullOrEmpty(line.TrimStart()))
                                 validLines.Add(line);
                         }
 
